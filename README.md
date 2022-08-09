@@ -1,2 +1,2 @@
 # SidebotOS
-Sidebot's Github Repository
+## SidebotOS is a Operating System created on Replit and imported to Github

@@ -1,3 +1,3 @@
-# SidebotOS  
-## SidebotOS is an Operating System
+# SideOS
+## SideOS is an Operating System
 

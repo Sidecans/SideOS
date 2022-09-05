@@ -35,7 +35,4 @@ tree = XML.parse("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\UserData.xml")
 root = tree.getroot()
 
 if root[0].text == "0":
-    
-    t1 = threading.Thread(target=setup, name="t1")
-    t1.start()
-    
+    setup()

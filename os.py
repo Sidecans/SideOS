@@ -1,8 +1,14 @@
-import xml.etree.ElementTree as XML
 import sys
+
+sys.path.insert(0, "OS\\Drive\\SideOS")
+
+
+import multiprocessing
+import xml.etree.ElementTree as XML
 import threading
 import time
 import os
+import multiprocessing
 
 
 GRAY = "\033[0;90m"
@@ -30,7 +36,7 @@ def setup():
 
 
  
-
+sys.path()
 tree = XML.parse("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\UserData.xml")
 root = tree.getroot()
 

@@ -1,15 +1,16 @@
 import sys
 
-sys.path.insert(0, "OS\\Drive\\SideOS")
+sys.path.append("OS\\Drive\\SideOS")
 
 
-import multiprocessing
+
 import xml.etree.ElementTree as XML
 import threading
 import time
 import os
-import multiprocessing
-
+import colorama
+import keyboard
+colorama.init()
 
 GRAY = "\033[0;90m"
 PINK = "\033[0;91m"
@@ -28,17 +29,34 @@ PURPLE = "\033[0;35m"
 CYAN = "\033[0;36m"
 WHITE = "\033[0;37m"
 
+keyboard.press('f11')
+
+def boot():
+    tree = XML.parse("OS\\Desktop\\Desktop.xml")
+    root = tree.getroot()
+    
 
 def setup():
-    print(BLUE + "Hello")
+    print(AQUA + "Hello")
     time.sleep(1)
     os.system('cls')
+    print("Welcome to your new SideOS" + WHITE)
+    time.sleep(2)
+    os.system('cls')
+    
+
+
+
 
 
  
-sys.path()
+
 tree = XML.parse("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\UserData.xml")
 root = tree.getroot()
 
 if root[0].text == "0":
     setup()
+while True:
+    boot()
+
+

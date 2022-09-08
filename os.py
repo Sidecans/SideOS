@@ -10,6 +10,8 @@ import time
 import os
 import colorama
 import keyboard
+from bs4 import BeautifulSoup 
+
 colorama.init()
 
 GRAY = "\033[0;90m"
@@ -36,6 +38,7 @@ def boot():
     root = tree.getroot()
     
 
+
 def setup():
     print(AQUA + "Hello")
     time.sleep(1)
@@ -43,6 +46,7 @@ def setup():
     print("Welcome to your new SideOS" + WHITE)
     time.sleep(2)
     os.system('cls')
+    
     
 
 
@@ -56,6 +60,10 @@ root = tree.getroot()
 
 if root[0].text == "0":
     setup()
+    with open("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\UserData.xml", 'r') as f:
+        data = f.read()
+    bs_data = BeautifulSoup(data, 'xml')
+
 while True:
     boot()
 

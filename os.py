@@ -10,7 +10,6 @@ import time
 import os
 import colorama
 import keyboard
-from bs4 import BeautifulSoup 
 
 colorama.init()
 
@@ -31,11 +30,10 @@ PURPLE = "\033[0;35m"
 CYAN = "\033[0;36m"
 WHITE = "\033[0;37m"
 
-keyboard.press('f11')
+#keyboard.press('f11')
 
 def boot():
-    tree = XML.parse("OS\\Desktop\\Desktop.xml")
-    root = tree.getroot()
+    pass
     
 
 
@@ -47,22 +45,14 @@ def setup():
     time.sleep(2)
     os.system('cls')
     
+with open("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\setup.txt", 'r+') as f:
     
-
-
-
-
-
- 
-
-tree = XML.parse("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\UserData.xml")
-root = tree.getroot()
-
-if root[0].text == "0":
-    setup()
-    with open("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\UserData.xml", 'r') as f:
-        data = f.read()
-    bs_data = BeautifulSoup(data, 'xml')
+    if f.read() == "0":
+       
+        setup()
+        with open("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\setup.txt", 'w') as g:
+            g.write("1")
+    
 
 while True:
     boot()

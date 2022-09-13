@@ -52,7 +52,6 @@ with open("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\setup.txt", 'r+') as f:
         setup()
         with open("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\setup.txt", 'w') as g:
             g.write("1")
-    
 
 while True:
     boot()

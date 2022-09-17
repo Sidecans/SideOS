@@ -30,10 +30,11 @@ PURPLE = "\033[0;35m"
 CYAN = "\033[0;36m"
 WHITE = "\033[0;37m"
 
-#keyboard.press('f11')
+keyboard.press('f11')
 
 def boot():
-    pass
+    for(files) in os.walk("OS\\Desktop"):
+        pass
     
 
 
@@ -45,14 +46,13 @@ def setup():
     time.sleep(2)
     os.system('cls')
     
-with open("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\setup.txt", 'r+') as f:
-    
+with open("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Reg\\setup.txt", 'r+') as f:
+
     if f.read() == "0":
        
         setup()
-        with open("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Data\\setup.txt", 'w') as g:
+        with open("OS\\Drive\\ProgramFiles\\Sidecans\S\\Reg\\setup.txt", 'w') as g:
             g.write("1")
-
 while True:
     boot()
 

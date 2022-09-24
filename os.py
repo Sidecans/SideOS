@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append("OS\\Drive\\SideOS")
+sys.path.append("OS\\Drive\\SideOS\\pkg")
 
 
 
@@ -30,7 +30,7 @@ PURPLE = "\033[0;35m"
 CYAN = "\033[0;36m"
 WHITE = "\033[0;37m"
 
-keyboard.press('f11')
+#keyboard.press('f11')
 
 def boot():
     for(files) in os.walk("OS\\Desktop"):

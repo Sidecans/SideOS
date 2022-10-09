@@ -13,7 +13,18 @@ public class holder {
     }
     public int getPin()
     {
-        return cardNum;
+        return pin;
     }
-
+    public String getFirstName(){
+        return firstName;
+    }
+    public String getLastName(){
+        return lastName;
+    }
+    public double getBal(){
+        return bal;
+    }
+    public static void Main(String[] args){
+        void printOptions()
+    }
 }

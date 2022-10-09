@@ -45,6 +45,7 @@ def setup():
     print("Welcome to your new SideOS" + WHITE)
     time.sleep(2)
     os.system('cls')
+    print("What would you like your Userna")
 mainthread = threading.Thread(target=boot)
 mainthread.start()
 with open("OS\\Drive\\ProgramFiles\\Sidecans\\OS\\Reg\\setup.txt", 'r+') as f:
